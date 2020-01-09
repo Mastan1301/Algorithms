@@ -28,16 +28,11 @@ ll gradeSchool(ll x, ll y) //grade school multiplication algorithm
     return res;
 }
 
-ll karatsuba(ll x, ll y)
-{
-    if()
-}
 
 int main()
 {
     ll x, y;
     cin >> x >> y;
     cout << gradeSchool(x, y) << endl;
-    //count << karatsuba(x, y) << endl;;
     return 0;
 }
