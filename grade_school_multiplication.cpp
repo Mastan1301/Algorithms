@@ -1,3 +1,7 @@
+/*Implementation of the multiplication algorithm which was used back in the school.
+    Time complexity: O(n*log(n)) */
+  
+
 #include <iostream>
 #include <vector>
 using namespace std;
