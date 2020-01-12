@@ -1,4 +1,5 @@
-//Karatsuba multiplication algorithm using recursion
+//Karatsuba multiplication algorithm using recursion improvised using Gauss's trick.
+// Time complexity: O(n*log(n))
 #include <bits/stdc++.h>
 using namespace std;
 //typedef long long int ll;
