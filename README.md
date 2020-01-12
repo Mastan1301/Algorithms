@@ -1,2 +1,2 @@
 # Algorithms
-In this repository, you will find C++ programs for basic algorithms.
+In this repository, you will find C++ programs for generic algorithms.
