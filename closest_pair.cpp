@@ -1,6 +1,6 @@
 /*
     Closest pair algorithm in 2-D using Divide and Conquer paradigm.
-    Applicable only when n is an even number >= 2.
+    Applicable only when n = 2^i, where i is a natural number.
     Time Complexity: O(n*log(n))
 */
 
