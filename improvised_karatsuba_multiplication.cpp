@@ -1,5 +1,6 @@
 //Karatsuba multiplication algorithm using recursion improvised using Gauss's trick.
-// Time complexity: O(n*log(n))
+// Time complexity: O(n^1.585)
+
 #include <bits/stdc++.h>
 using namespace std;
 //typedef long long int ll;
@@ -9,7 +10,7 @@ inline int cint(char c)
     return int(c)-int('0');
 }
 
-string remov_zeros(string s)
+string remov_zeros(string s) //removing redundant zeros
 {
     int pos = 0;
     while(s[pos] == '0') {
@@ -20,7 +21,7 @@ string remov_zeros(string s)
    return s;
 }
 
-string sub(string s1, string s2)
+string sub(string s1, string s2) //subtracting two strings
 {
     string res;
     int temp, carry = 0;
@@ -65,7 +66,7 @@ string sub(string s1, string s2)
     return remov_zeros(res);
 }
 
-string add(string s1, string s2)
+string add(string s1, string s2) //adding two strings
 {
     int n1 = s1.length(), n2 = s2.length(), carry = 0;
 	reverse(s1.begin(), s1.end());
@@ -121,11 +122,10 @@ string karatsuba(string x, string y)
     for(int i = 0; i < a.length(); i++)
         s2 = s2+'0';
 
-    string ac = karatsuba(a, c), bd = karatsuba(b, d), adbc = sub(karatsuba(add(a, b), add(c, d)), add(ac, bd));
-    /*cout << "ac = " << ac << endl;
-    cout << "adbc = " << adbc << endl;
-    cout << "bd = " << bd << endl;*/
+    string ac = karatsuba(a, c), bd = karatsuba(b, d);
+    string adbc = sub(karatsuba(add(a, b), add(c, d)), add(ac, bd)); //the Gauss's trick
     string res = add(ac+s1, add(bd, adbc+s2));
+	
     return res;
 }
 
