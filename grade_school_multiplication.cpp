@@ -1,5 +1,6 @@
 /*Implementation of the multiplication algorithm which was used back in the school.
-    Time complexity: O(n*log(n)) */
+   Time complexity: O(n^2) 
+*/
   
 
 #include <iostream>
