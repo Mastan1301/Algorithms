@@ -1,5 +1,5 @@
 //Karatsuba multiplication algorithm using recursion
-//Time complexity: O(n*log(n))
+//Time complexity: O(n^2)
 
 #include <bits/stdc++.h>
 using namespace std;
