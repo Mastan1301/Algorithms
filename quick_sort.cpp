@@ -17,7 +17,7 @@ vec quickSort(vec a)
     }
 
     int c = 1;
-    int pivot = a[c-1], temp, i = c;    
+    int pivot = a[c-1], temp, i = c;  
 
     for(int j = c; j < size; j++)
     {
@@ -26,26 +26,27 @@ vec quickSort(vec a)
                 temp = a[i];
                 a[i] = a[j];
                 a[j] = temp;
-                //j++;
                 i++;
             }
     }
 
+    if(i > 1)
+   {
     vec l(a.begin()+1, a.begin()+i);
     vec left = quickSort(l);
 
-    for(int j = c-1; j < i; j++)
+    for(int j = c-1; j < i-1; j++)
     {
         a[j] = left[j];
-        //a[j+i+1] = right[j];
     }
+   }
 
-    if(i < size-1) 
+    if(i <= size-1) 
     {
         vec r(a.begin()+i, a.begin()+size);
         vec right = quickSort(r);        
-        for(int j = i+1; j < size; j++)
-            a[j] = right[j-(i+1)];
+        for(int j = i; j < size; j++)
+            a[j] = right[j-i];
     }
 
     a[i-1] = pivot;
