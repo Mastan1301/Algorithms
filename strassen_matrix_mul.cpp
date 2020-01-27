@@ -3,7 +3,8 @@
  Time complexity: O(n^2.807)
 
  Note: This algorithm is applicable for square matrices where 'n' is in the power of 2 only.
- For eg: for size = 2x2, 4x4, 8x8,.... */
+ For eg: for size = 2x2, 4x4, 8x8,.... 
+ For any other sizes, appropriate padding of zeros will do the trick.*/
 
 #include <bits/stdc++.h>
 using namespace std;
