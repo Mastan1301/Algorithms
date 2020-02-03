@@ -1,5 +1,7 @@
 /*
-    Deterministic Selection Algorithm
+    Deterministic Selection Algorithm: Algorithm for finding the k^th minimum (k^th order statistic) 
+    in a given array by selecting the median of medians as the pivot.
+    
     Time complexity: O(n)
 */
 
